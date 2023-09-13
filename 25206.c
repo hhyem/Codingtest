@@ -31,7 +31,7 @@ int main(void) {
 
   for(int i=0; i<20; i++) {
     scanf("%s %f %s", &c[i].name, &c[i].score, &c[i].s_grade);
-    if(strcmp(c[i].s_grade, "P")==0 || strcmp(c[i].s_grade, "F")==0)
+    if(strcmp(c[i].s_grade, "P")==0)
       continue;
     else
       g_sum += c[i].score;
@@ -43,7 +43,7 @@ int main(void) {
       if(strcmp(c[i].s_grade, g[j].s_grade)==0) {
         sum = sum + (c[i].score * g[j].score);
         break;
-      } else if(strcmp(c[i].s_grade, "P")==0 || strcmp(c[i].s_grade, "F")==0) 
+      } else if(strcmp(c[i].s_grade, "P")==0) 
         continue;
     }
   }
